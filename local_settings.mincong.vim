@@ -31,3 +31,34 @@ endif
 
 let g:vimwiki_list = [s:wiki_1]
 
+syn on
+set ai
+set bs=2
+"set showmatch
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set cursorline
+set number
+
+"set ignorecase
+"set hls
+"set helplang=cn
+"set foldmethod=syntax
+
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+if has("win32")
+     set fileencoding=chinese
+else
+     set fileencoding=utf-8
+endif
+
+language messages zh_CN.utf-8
+
+colorscheme koehler
+set guioptions-=m
+set guioptions-=T
+filetype plugin on
+filetype indent on
