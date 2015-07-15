@@ -27,6 +27,8 @@ let g:load_bundles = [
 	\'zencoding',
 	\'vimproc',
 	\'ghcmod',
+	\'vim-swift',
+	\'vim-signature',
 	\]
 
 let g:ghcmod_ghc_options = ['-package-db=' . expand('$HS_HOME') . '/lib/package.conf.d']
