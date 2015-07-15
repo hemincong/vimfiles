@@ -29,3 +29,9 @@
 [submodule "available/haskellFold"]
 	path = available/haskellFold
 	url = https://github.com/Twinside/vim-haskellFold.git
+[submodule "available/vim-colors-solarized"]
+	path = available/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "available/vim-swift"]
+	path = available/vim-swift
+	url = https://github.com/kballard/vim-swift.git
