@@ -10,10 +10,10 @@ if !exists('g:win_tools_dir_list')
 		\]
 endif
 
-if has('gui_running')
-	colo darkblue
-else
-endif
+"if has('gui_running')
+	"colo darkblue
+"else
+"endif
 
 " for 'session' plugin
 let g:session_autosave = 'yes'
@@ -62,3 +62,12 @@ set guioptions-=m
 set guioptions-=T
 filetype plugin on
 filetype indent on
+syntax enable
+colorscheme solarized
+
+"if has('gui_running')
+    "set background=light
+"else
+    "let g:solarized_termcolors=256
+    "set background=dark
+"endif
