@@ -25,7 +25,7 @@ function s:load_bundle_settings(bundle_dirname)
 	if exists('g:vimfiles_username')
 		call s:source_if_readable(s:ext_vimfiles_dir . '/settings.' . g:vimfiles_username . '/' . a:bundle_dirname . '.vim')
 	else
-		call s:source_if_readable(expand('~/vimfiles/settings/' . a:bundle_dirname . '.vim'))
+		call s:source_if_readable(s:ext_vimfiles_dir . '/settings/' . a:bundle_dirname . '.vim')
 	endif
 endfunction
 
@@ -37,7 +37,7 @@ call s:source_if_readable(s:ext_vimfiles_dir . '/local_settings.default.vim')
 if exists('g:vimfiles_username')
 	call s:source_if_readable(s:ext_vimfiles_dir . '/local_settings.' . g:vimfiles_username . '.vim')
 else
-	call s:source_if_readable(expand('~/vimfiles/local_settings.vim'))
+	call s:source_if_readable(s:ext_vimfiles_dir . '/local_settings.vim')
 endif
 
 
@@ -178,6 +178,8 @@ nmap <F6> :exec ":wa \| mksession! " . v:this_session<CR>
            \   ['set bg='.&bg, 'color '.colors_name],
            \   fnamemodify(v:this_session, ':p:r') . 'x.vim')<CR> 
 
+imap <F6> <ESC><F6>
+
 vmap <F2> "0p
 nmap <F2> viw"0p
 
@@ -221,9 +223,13 @@ if s:if_bundle_enabled('YankRing')
 	nnoremap <silent> <F11> :YRShow<CR>
 endif
 
+if s:if_bundle_enabled('haskell-cabal')
+	nmap <F8> <F6>:Cabal build<CR>
+	imap <F8> <ESC><F8>
+endif
+
 " ......... some 'standard' but plugin-dependent settings ends .......
 
 " user can use ~/local.vimrc to adjust some settings finally.
 " for example, override some settings above.
-call s:source_if_readable(expand('~/vimfiles/final_settings.vim'))
-
+call s:source_if_readable(s:ext_vimfiles_dir . '/final_settings.vim')
