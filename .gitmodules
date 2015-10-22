@@ -53,3 +53,9 @@
 [submodule "available/numbertoggle"]
 	path = available/numbertoggle
 	url = git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
+[submodule "available/dash.vim"]
+	path = available/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
+[submodule "available/vim-markdown"]
+	path = available/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
